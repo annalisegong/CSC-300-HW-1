@@ -5,26 +5,21 @@ public class HelloWorld
 
 	public static void main(String[] args)
 	{
-		/*for(int i = 0; i <= 4; i++)
+		System.out.println("hello");
+		Salesman sales[] = new Salesman[10];
+		sales[0] = new Salesman("hunter", 10000);
+		sales[1] = new Salesman("john", 7100);
+		sales[2] = new Salesman("smith", 6300);
+		sales[3] = new Salesman("jane", 9200);
+		sales[4] = new Salesman("sally", 3100);
+		Salesman.getTopFive(sales);
+		for(int i = 0; i < 10; i++)
 		{
-			System.out.println("Enter name of salesman: ");
-			Salesman.defineSalesman(System.in());
+			System.out.println(sales[i]);
 		}
+		System.out.println("The top five salesmen are: ");
 		
-		//initialize all array elements with a - sales total
-		for(int i = 0; i < topSales.length; i++)
-		{
-			topSales[i].name = "";
-			topSales[i].salesTotal = -1;
-		}*/
-	
-		int intArray[];
-		intArray = new int[] {2, 3, 8, 10, 5, 7, 1, 6, 9, 4};
-		int topFive[];
-		topFive = new int[] {-1, -1, -1, -1, -1};
-		int least = findLeast(intArray);
-		//int max = findMax(intArray);
-		//System.out.println("the largest value in the array list is " + max);
+		
 	}
 	
 	protected static int findMax(int[] array)
@@ -40,15 +35,16 @@ public class HelloWorld
 		}
 	}
 	
-	protected static int findLeast(int[] array)
+	/*protected static int findLeast(int[] array)
 	{
 		int tempFive[];
 		tempFive = new int[] {-1, -1, -1, -1, -1};
 		for(int i = 0; i < array.length; i++)
 		{
-			if(array[i] > tempFive[i])
+			if(array[i] > tempFive[i]) // test with displaying tempFive array
 			{
 				tempFive[i] = array[i];
+				System.out.println(tempFive);
 			}
 		}
 		for(int a = array.length - 1; a >= 0; a--)
@@ -59,5 +55,5 @@ public class HelloWorld
 			}
 		}
 		return tempFive[0];
-	}
+	}*/
 }
