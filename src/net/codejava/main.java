@@ -18,61 +18,18 @@ public class main
 		sales[7] = new Salesman("jill", 6782);
 		sales[8] = new Salesman("molly", 9832);
 		sales[9] = new Salesman("ryan", 3794);
-		
-		Salesman temp[] = new Salesman[5];
-		temp[0] = new Salesman("empty", 0);
-		temp[1] = new Salesman("empty", 0);
-		temp[2] = new Salesman("empty", 0);
-		temp[3] = new Salesman("empty", 0);
-		temp[4] = new Salesman("empty", 0);
-		
 								
-		/*tests that sales stores info correctly
-		test proved correct store and display of info
+		/*tests that sales stores info correctly test proved correct store and display of info
 		for(int i = 0; i < 10; i++)
 		{
 			System.out.println(sales[i]);
 		}*/
 		
 		//calls Salesman class to use the getTopFive method from the sales[]
-		Salesman.getTopFive(sales, temp);
+		Salesman.orderSales(sales);
 		
 		//displays the 5 salesmen with the top totalSales
 		System.out.println("The top five salesmen are: ");
+		Salesman.getTopFive(sales);
 	}
-	
-	/*protected static int findMax(int[] array)
-	{
-		int tempMax = -1;
-		for(int i = 0; i < array.length; i++)
-		{
-			if(tempMax < array[i])
-			{
-				tempMax = array[i];
-			}
-		return tempMax;
-		}
-	}
-	
-	protected static int findLeast(int[] array)
-	{
-		int tempFive[];
-		tempFive = new int[] {-1, -1, -1, -1, -1};
-		for(int i = 0; i < array.length; i++)
-		{
-			if(array[i] > tempFive[i]) // test with displaying tempFive array
-			{
-				tempFive[i] = array[i];
-				System.out.println(tempFive);
-			}
-		}
-		for(int a = array.length - 1; a >= 0; a--)
-		{
-			if(tempFive[a] < tempFive[a-1])
-			{
-				tempFive[a-1] = tempFive[a];
-			}
-		}
-		return tempFive[0];
-	}*/
 }
